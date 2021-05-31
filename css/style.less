@@ -1,0 +1,296 @@
+//Main settings
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+
+}
+body {
+    height: 100vh;
+    width: 100%;
+}
+.h2() {
+    color: @h2_text;
+    font-size: 5.4rem;
+    font-weight: 700;
+}
+.p() {
+    margin-top: 2.4rem;
+    color: @text-color_gray;
+    font-size: 1.8rem;
+}
+//Buttons settings
+.btn_orange {
+    padding: 1.5rem 6rem;
+    background-color: @orange;
+    border:none;
+    color: #fff;
+    font-size: 1.8rem;
+    &:focus {
+        outline:none;
+    }
+    &:active {
+        background-color: darken(@orange, 5%);
+
+    }
+}
+
+.btn_call {
+    padding: 1rem 3.5rem;
+    border: 1px solid #F82370;
+    background-color:#fff;
+    font-size: 1.6rem;
+    color: #F53F4F;
+    &:focus {
+        outline:none;
+    }
+    &:active {
+        background-color: darken(#fff, 5%);
+    }
+}
+//Colors settings
+@bc-main: #FBFBFB;
+@orange: #FF4E2E;
+@text-color_durk: #1F1F24;
+@text-color_gray: #8993AD;
+@h2_text: #262626;
+
+//Main section
+
+.main {
+    width: 100%;
+    background-color: @bc-main;
+    &-header {
+        &-menu {
+            padding: 3rem 0;
+            a {
+                margin: 0 1rem;
+                color: @text-color_durk;
+                font-size: 1.6rem;
+                &:hover {
+                    text-decoration: none;
+                    color: @text-color_durk;
+                }
+                &:focus {
+                    color: #FC557C;
+                    border-bottom: 1px solid #FC557C;
+                }
+            }
+        }
+        &-contacts {
+            padding: 2rem 0;
+            a {
+                color: @text-color_durk;
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-right: 2rem;
+                &:hover {
+                    color: @text-color_durk;
+                    text-decoration: none;
+                }
+            }
+
+        }
+    }
+    &-content {
+        &-text {
+            margin-bottom: 4.5rem;
+            margin-top: 20rem;
+            h1 {
+                font-size: 7rem;
+                color: @text-color_durk;
+                font-weight: 700;
+            }
+            p {
+                color: @text-color_gray;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+
+//Work section
+.work {
+    padding: 9rem 0;
+    // height: 100vh; лучше смотрится 
+    &-header{
+        h2 {
+            .h2()
+        }
+    }
+    &-content {
+        padding: 9rem 0;
+        &-block {
+            p {
+                .p();
+            }
+        }
+    }
+}
+
+//Portfolio section
+.portfolio {
+    padding: 10rem 0;
+    
+    &-header {
+        padding: 8rem 4rem;
+        h2 {
+            .h2();
+        }
+    }
+    &-content {
+        margin: 9rem 0;
+        &-block {
+            p {
+                .p();
+            }
+        }
+    }
+}
+
+//Adaptive section
+
+.adaptive {
+    background-color: @orange;
+    padding: 8rem 0;
+    margin-top: 9rem;
+    &-header {
+        margin-left: 6rem;
+        h3 {
+            color: #fff;
+            font-size: 4.5rem;
+            font-weight: 700;
+        }
+        p {
+            font-size: 1.8rem;
+            color: #fff
+        }
+    }
+}
+
+//Contacts section
+.contacts {
+    padding: 8rem 0;
+
+    &-menu {
+        a {
+            display: block;
+            font-size: 2rem;
+            color: @text-color_gray;
+            &:nth-child(2){
+                margin-top: 1.5rem;
+            }
+            &:nth-child(3){
+                margin-top: 1.5rem;
+            }
+            &:hover {
+                color: #FC557C;
+                text-decoration: none;
+            }
+        }
+    }
+    &-link {
+        a {
+            display: block;
+            font-size: 2rem;
+            color: #000;
+            &:nth-child(2){
+                margin-top: 2rem;
+            }
+            &:hover {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+    }
+    .btn_call {
+        display: block;
+    }
+
+    .soclinks {
+        &:nth-child(2) {
+            margin-left: 1.5rem;
+        }
+        &:nth-child(3) {
+            margin-left: 1.5rem;
+        }
+        &:nth-child(4) {
+            margin-left: 1.5rem;
+        }
+    }
+    i {
+        margin-top: 2.5rem;
+        font-size: 2.2rem;
+        color: @text-color_gray;
+    }
+
+}
+
+footer {
+    background-color:#31293C;
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 3rem 0;
+}
+
+//ADAPTIVE
+
+@media(max-width: 991px) {
+    .main {
+        &-header {
+            &-menu {
+                text-align: center;
+            }
+            &-contacts {
+                text-align: center;
+                a {
+                    display: block;
+                    margin-bottom: 5rem;
+                }
+            }
+        }
+        &-content {
+            img {
+                max-width: 100%;
+            }
+            &-button {
+                    text-align: center;
+            }
+            &-text {
+                text-align: center;
+            }
+        }   
+    }
+    .portfolio {
+        img {
+            max-width: 90%;
+        }
+    }
+    .work {
+        &-content {
+            &-block {
+                padding: 2rem;
+                margin: 2rem;
+                border: 3px solid #FC557C;
+            }
+        }
+    }
+    .contacts {
+        &-menu {
+            text-align: center;
+            a {
+                display: inline-block;
+                margin: 0 3rem;
+            }
+        }
+        &-link {
+            margin: 3rem;
+            text-align: center;
+        }
+    }
+    .social {
+        text-align: center;
+        button {
+            margin: 0 auto;
+        }
+    }
+}
