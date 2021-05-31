@@ -1,8 +1,12 @@
 html {
+  overflow-x: hidden;
   font-size: 10px;
   scroll-behavior: smooth;
+  height: 100vh;
+  width: 100%;
 }
 body {
+  overflow-x: hidden;
   height: 100vh;
   width: 100%;
 }
@@ -207,8 +211,9 @@ footer {
     max-width: 90%;
   }
   .work-content-block {
-    padding: 2rem;
-    margin: 2rem;
+    min-height: 24rem;
+    padding: 2.5rem;
+    margin-top: 2.5rem;
     border: 3px solid #FC557C;
   }
   .contacts-menu {
@@ -227,5 +232,36 @@ footer {
   }
   .social button {
     margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  .main-content h1 {
+    font-size: 4rem;
+  }
+  .main-content .human-img {
+    display: none;
+  }
+  .work-header h2 {
+    font-size: 3.5rem;
+  }
+  .work-btn {
+    margin: 0;
+    padding: 0;
+  }
+  .work-content-block {
+    padding: 2rem 0;
+  }
+  .work-content-block p {
+    max-width: 100%;
+  }
+  .portfolio-header h2 {
+    font-size: 3.5rem;
+  }
+  .adaptive-header {
+    text-align: center;
+    margin: 0;
+  }
+  .adaptive-header h3 {
+    font-size: 3rem;
   }
 }
